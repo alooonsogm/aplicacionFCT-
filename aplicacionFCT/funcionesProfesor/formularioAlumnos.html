@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina principal</title>
+    <link rel="stylesheet" href="../estilos.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="cabecera">
+            <img src="../imagenes/logo.png" alt="Logo FCT" height="90px" id="logo">
+            <h1>Aplicacion FCT</h1>
+            <a href="../sesiones/sesionIniciadaProfesor.html"><button id="botonCierra">Volver</button></a>
+        </div>
+
+        <div id="cuerpo">
+            <div id="contenidoFormulario">
+                <h3>Formulario de alumnos</h3>
+                ID:<input type="text" name="id">
+                <br><br>
+                Nombre Completo:<input type="text" name="nombre">
+                <br><br>
+                Fecha Nacimiento:<input type="date" name="fecha">
+                <br><br>
+                Género:
+                <select name="genero">
+                    <option value="Masculino">Masculino</option>
+                    <option value="Femenino">Femenino</option>
+                    <option value="Otro">Otro</option>
+                    <option value="Prefiero no decirlo">Prefiero no decirlo</option>
+                </select>
+                <br><br>
+                Correo electrónico:<input type="email" name="email">
+                <br><br>
+                Número de teléfono:<input type="number" name="numero">
+                <br><br>
+                Dirección:<input type="text" name="direccion">
+                <br><br>
+                Centro Educativo:
+                <select name="centroEducativo">
+                    <option value="Escuela Secundaria A">Escuela Secundaria A</option>
+                    <option value="Colegio ABC">Colegio ABC</option>
+                </select>
+                <br><br>
+                Grado/Curso:
+                <select name="curso">
+                    <option value="1º de ESO">1º de ESO</option>
+                    <option value="2º de ESO">2º de ESO</option>
+                    <option value="3º de ESO">3º de ESO</option>
+                    <option value="4º de ESO">4º de ESO</option>
+                    <option value="1º de Bachillerato">1º de Bachillerato</option>
+                    <option value="2º de Bachillerato">2º de Bachillerato</option>
+                </select>
+                <br><br>
+                Tutor:<input type="text" name="tutor">
+                <br><br>
+                Estado del alumno:
+                <select name="estado">
+                    <option value="Activo">Activo</option>
+                    <option value="Suspendido">Suspendido</option>
+                    <option value="Graduado">Graduado</option>
+                </select>
+                <br><br>
+                Fecha de inscripción:<input type="date" name="fechainscrip">
+                <br><br>
+                foto de perfil:<input type="image" name="foto">
+                <br><br>
+                Notas académicas:<input type="text" name="notas">
+                <br><br>
+                Observaciones:<input type="text" name="observacion">
+                <br><br>
+                <input type="submit" name="enviar" id="Enviar">
+            </div>
+        </div>
+        <div id="pie">
+            <p>Contacto: aplicacionFCT@gmail.com | Teléfono: +34 67348045</p>
+            <p>Síguenos en:</p>
+            <ul>
+                <li><a href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2F%3Flocale%3Des_ES">Facebook</a></li>
+                <li><a href="https://www.instagram.com/?hl=es">Instagram</a></li>
+                <li><a href="https://x.com/?lang=es&mx=2">Twitter</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script>
+    document.getElementById('Enviar').addEventListener('click', function () {
+
+        const id = document.querySelector('input[name="id"]').value.trim();
+        const nombre = document.querySelector('input[name="nombre"]').value.trim();
+        const fecha = document.querySelector('input[name="fecha"]').value.trim();
+        const fechainscrip = document.querySelector('input[name="fechainscrip"]').value.trim();
+        const tutor = document.querySelector('input[name="tutor"]').value.trim();
+
+        if (!id || !nombre || !fecha || !fechainscrip || !tutor) {
+            alert('Formulario incompleto. Por favor, complete todos los campos obligatorios.');
+            return;
+        }
+
+        alert('Formulario enviado con éxito.');
+    });
+
+</script>
+
+</html>

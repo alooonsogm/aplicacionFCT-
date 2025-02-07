@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina principal</title>
+    <link rel="stylesheet" href="../estilos.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="cabecera">
+            <img src="../imagenes/logo.png" alt="Logo FCT" height="90px" id="logo">
+            <h1>Aplicacion FCT</h1>
+            <a href="../sesiones/sesionIniciadaTutorDeCentro.html"><button id="botonCierra">Volver</button></a>
+        </div>
+
+        <div id="contenidoFormulario">
+            <h1>Asignar datos al alumno en fase realizacion convenio</h1>
+            <p>Introduce los datos de la empresa:</p>
+            Nombre de la empresa: <input type="text" name="nombreEmpresa" id="nombreEmpresa">
+            <br>
+            CIF Empresa: <input type="text" name="cifEmpresa" id="cifEmpresa">
+            <br>
+            Dirección de la empresa: <input type="text" name="direccionEmpresa" id="direccionEmpresa">
+            <br>
+            Tipo de entidad (SA, SL, etc.): <input type="text" name="tipoEntidad" id="tipoEntidad">
+            <br>
+            Nombre del representante: <input type="text" name="nombreRepresentante" id="nombreRepresentante">
+            <br>
+            DNI del representante: <input type="text" name="dniRepresentante" id="dniRepresentante">
+            <br>
+            Cargo en la empresa del representante: <input type="text" name="cargoRepresentante" id="cargoRepresentante">
+            <br>
+            Persona de contacto: <input type="text" name="personaContacto" id="personaContacto">
+            <br>
+            Mail de contacto: <input type="email" name="mailContacto" id="mailContacto">
+            <br>
+            Teléfono de contacto: <input type="number" name="telefonoContacto" id="telefonoContacto">
+            <br>
+            Firma Digital o Manuscrita: 
+            <select name="firma" id="firma">
+                <option value="Digital">Digital</option>
+                <option value="Manuscrita">Manuscrita</option>
+            </select>
+            <br>
+            <input type="submit" value="Enviar" id="elBoton">
+        </div>
+
+        <div id="pie">
+            <p>Contacto: aplicacionFCT@gmail.com | Teléfono: +34 67348045</p>
+            <p>Síguenos en:</p>
+            <ul>
+                <li><a href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2F%3Flocale%3Des_ES">Facebook</a></li>
+                <li><a href="https://www.instagram.com/?hl=es">Instagram</a></li>
+                <li><a href="https://x.com/?lang=es&mx=2">Twitter</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script>
+    document.getElementById('elBoton').addEventListener('click', function () {
+        alert("Datos de la empresa para el convenio:\n" +
+        "Nombre de la empresa: " + document.getElementById('nombreEmpresa').value + "\n" +
+        "CIF Empresa: " + document.getElementById('cifEmpresa').value + "\n" +
+        "Dirección de la empresa: " + document.getElementById('direccionEmpresa').value + "\n" +
+        "Tipo de entidad: " + document.getElementById('tipoEntidad').value + "\n" +
+        "Nombre del representante: " + document.getElementById('nombreRepresentante').value + "\n" +
+        "DNI del representante: " + document.getElementById('dniRepresentante').value + "\n" +
+        "Cargo en la empresa del representante: " + document.getElementById('cargoRepresentante').value + "\n" +
+        "Persona de contacto: " + document.getElementById('personaContacto').value + "\n" +
+        "Mail de contacto: " + document.getElementById('mailContacto').value + "\n" +
+        "Teléfono de contacto: " + document.getElementById('telefonoContacto').value + "\n" +
+        "Firma: " + document.getElementById('firma').value);
+});
+</script>
+
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina principal</title>
+    <link rel="stylesheet" href="../estilos.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="cabecera">
+            <img src="../imagenes/logo.png" alt="Logo FCT" height="90px" id="logo">
+            <h1>Aplicacion FCT</h1>
+            <a href="../sesiones/sesionIniciadaAdmin.html"><button id="botonCierra">Volver</button></a>
+        </div>
+
+        <div id="cuerpo">
+            <div id="contenidoFormulario">
+                <h3>Formulario de profesores</h3>
+                Nombre Completo:<input type="text" name="nombre">
+                <br><br>
+                ID:<input type="number" name="id">
+                <br><br>
+                Correo electronico:<input type="email" name="email">
+                <br><br>
+                Numero de telefono:<input type="number" name="numero">
+                <br><br>
+                Direccion:<input type="text" name="direccion">
+                <br><br>
+                Fecha Nacimiento:<input type="date" name="fecha">
+                <br><br>
+                Género:
+                <select name="genero">
+                    <option value="Masculino">Masculino</option>
+                    <option value="Femenino">Femenino</option>
+                    <option value="Otro">Otro</option>
+                    <option value="Prefiero no decirlo">Prefiero no decirlo</option>
+                </select>
+                <br><br>
+                Rol:
+                <select name="Rol">
+                    <option value="Profesor">Profesor</option>
+                    <option value="Coordinador">Coordinador</option>
+                    <option value="JefeDepartamento">Jefe de departamento</option>
+                </select>
+                <br><br>
+                Departamento:
+                <select name="departamento">
+                    <option value="Matemáticas">Matemáticas</option>
+                    <option value="Lengua">Lengua</option>
+                    <option value="CienciasSociales">CienciasSociales</option>
+                </select>
+                <br><br>
+                Tipo Contrato:
+                <select name="contrato">
+                    <option value="TiempoCompleto">Tiempo Completo</option>
+                    <option value="MedioTiempo">Medio Tiempo</option>
+                    <option value="Sustituto">Sustituto</option>
+                </select>
+                <br><br>
+                Fecha de Ingreso:<input type="date" name="fechaIngreso">
+                <br><br>
+                Estado del profesor:
+                <select name="estado">
+                    <option value="Activo">Activo</option>
+                    <option value="EnLicencia">En licencia</option>
+                    <option value="Inactivo">Inactivo</option>
+                </select>
+                <br><br>
+                Foto de perfil:<input type="image" name="foto">
+                <br><br>
+                Notas adicionales:<input type="text" name="notas">
+                <br><br>
+                Contraseña:<input type="password" name="pass">
+                <br><br>
+                Centro Educativo:
+                <select name="centroEducativo">
+                    <option value="Escuela Secundaria A">Escuela Secundaria A</option>
+                    <option value="Colegio ABC">Colegio ABC</option>
+                </select>
+                <br><br>
+                <input type="submit" name="enviar" id="Enviar">
+            </div>
+        </div>
+
+        <div id="pie">
+            <p>Contacto: aplicacionFCT@gmail.com | Teléfono: +34 67348045</p>
+            <p>Síguenos en:</p>
+            <ul>
+                <li><a href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2F%3Flocale%3Des_ES">Facebook</a></li>
+                <li><a href="https://www.instagram.com/?hl=es">Instagram</a></li>
+                <li><a href="https://x.com/?lang=es&mx=2">Twitter</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script>
+    document.getElementById('Enviar').addEventListener('click', function () {
+
+        const nombre = document.querySelector('input[name="nombre"]').value.trim();
+        const id = document.querySelector('input[name="id"]').value.trim();
+        const email = document.querySelector('input[name="email"]').value.trim();
+        const pass = document.querySelector('input[name="pass"]').value.trim();
+
+        if (!nombre || !id || !email || !pass) {
+            alert('Formulario incompleto. Por favor, complete todos los campos obligatorios.');
+            return;
+        }
+
+        const passRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+
+        if (!passRegex.test(pass)) {
+            alert('Contraseña no disponible. Debe contener al menos una letra mayúscula, una minúscula, un número y un carácter especial.');
+            return;
+        }
+
+        alert('Formulario enviado con éxito.');
+    });
+
+</script>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina principal</title>
+    <link rel="stylesheet" href="../estilos.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="cabecera">
+            <img src="../imagenes/logo.png" alt="Logo FCT" height="90px" id="logo">
+            <h1>Aplicacion FCT</h1>
+            <a href="../sesiones/sesionIniciadaTutorDeCentro.html"><button id="botonCierra">Volver</button></a>
+        </div>
+
+        <div id="cuerpo">
+            <div id="contenidoFormulario">
+                <h3>Formulario de empresas</h3>
+                ID:<input type="text" name="id">
+                <br><br>
+                Nombre de la empresa:<input type="text" name="nombreEmpresa">
+                <br><br>
+                Razon Social:<input type="text" name="razon">
+                <br><br>
+                Tipo de empresa:
+                <select name="tipoEmpresa">
+                    <option value="SociedadAnonima">Sociedad Anónima</option>
+                    <option value="SociedadLimitada">Sociedad Limitada</option>
+                    <option value="Autonomo">Autónomo</option>
+                </select>
+                <br><br>
+                NIF/CIF:<input type="text" name="nif">
+                <br><br>
+                Correo electrónico:<input type="email" name="correo">
+                <br><br>
+                Número de teléfono:<input type="number" name="numero">
+                <br><br>
+                Dirección:<input type="text" name="direccion">
+                <br><br>
+                Ciudad:<input type="text" name="ciudad">
+                <br><br>
+                Codigo Postal:<input type="number" name="codigo">
+                <br><br>
+                País:<input type="text" name="pais">
+                <br><br>
+                Fecha de constitución:<input type="date" name="fechaCon">
+                <br><br>
+                Sector:
+                <select name="sector">
+                    <option value="Tecnología">Tecnología</option>
+                    <option value="Salud">Salud</option>
+                    <option value="Educacion">Educación</option>
+                </select>
+                <br><br>
+                Número de empleados:<input type="number" name="numeroEmple">
+                <br><br>
+                Sitio web:<input type="text" name="sitioWeb">
+                <br><br>
+                Logo de la empresa:<input type="image" name="logo">
+                <br><br>
+                Representante legal:<input type="text" name="representante">
+                <br><br>
+                Estado de la empresa:
+                <select name="estado">
+                    <option value="Activa">Activa</option>
+                    <option value="Inactiva">Inactiva</option>
+                    <option value="EnLiquidación">En liquidación</option>
+                </select>
+                <br><br>
+                Fecha de alta:<input type="date" name="fechaAlta">
+                <br><br>
+                Notas adicionales:<input type="text" name="notasAdicionales">
+                <br><br>
+                <input type="submit" name="enviar" id="Enviar">
+            </div>
+        </div>
+
+        <div id="pie">
+            <p>Contacto: aplicacionFCT@gmail.com | Teléfono: +34 67348045</p>
+            <p>Síguenos en:</p>
+            <ul>
+                <li><a href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2F%3Flocale%3Des_ES">Facebook</a></li>
+                <li><a href="https://www.instagram.com/?hl=es">Instagram</a></li>
+                <li><a href="https://x.com/?lang=es&mx=2">Twitter</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script>
+    document.getElementById('Enviar').addEventListener('click', function () {
+        const id = document.querySelector('input[name="id"]').value.trim();
+        const nombreEmpresa = document.querySelector('input[name="nombreEmpresa"]').value.trim();
+        const nif = document.querySelector('input[name="nif"]').value.trim();
+        const correo = document.querySelector('input[name="correo"]').value.trim();
+        const direccion = document.querySelector('input[name="direccion"]').value.trim();
+        const ciudad = document.querySelector('input[name="ciudad"]').value.trim();
+        const codigo = document.querySelector('input[name="codigo"]').value.trim();
+        const pais = document.querySelector('input[name="pais"]').value.trim();
+
+        if (!id || !nombreEmpresa || !nif || !correo || !direccion || !ciudad || !codigo || !pais) {
+            alert('Formulario incompleto. Por favor, complete todos los campos obligatorios.');
+            return;
+        }
+
+        alert('Formulario enviado con éxito.');
+    });
+
+</script>
+
+</html>

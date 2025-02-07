@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina principal</title>
+    <link rel="stylesheet" href="../estilos.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="cabecera">
+            <img src="../imagenes/logo.png" alt="Logo FCT" height="90px" id="logo">
+            <h1>Aplicacion FCT</h1>
+            <a href="../sesiones/sesionIniciadaTutorDeCentro.html"><button id="botonCierra">Volver</button></a>
+        </div>
+
+        <div id="contenidoFormulario">
+            <h1>Asignar datos al alumno en fase asignado a empresa</h1>
+            <p>Introduce el nombre del alumno para asignar los diferentes datos:</p>
+            Nombre: <input type="text" name="elNombre" id="elNombre">
+            <br>
+            Nombre empresa: <input type="text" name="laEmpresa" id="laEmpresa">
+            <br>
+            Fecha inicio: <input type="date" name="fechaInicio" id="fechaInicio">
+            <br>
+            Fecha fin: <input type="date" name="fechaFin" id="fechaFin">
+            <br>
+            Horario: <input type="time" name="horario" id="horario">
+            <br>
+            Nº horas: <input type="number" name="horas" id="horas">
+            <br>
+            Modalidad: <select name="modalidad" id="modalidad">
+                <option value="Presencial">Presencial</option>
+                <option value="Teletrabajo">Teletrabajo</option>
+            
+            </select>
+            <br>
+            <input type="submit" value="Enviar" id="elBoton">
+        </div>
+
+        <div id="pie">
+            <p>Contacto: aplicacionFCT@gmail.com | Teléfono: +34 67348045</p>
+            <p>Síguenos en:</p>
+            <ul>
+                <li><a href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2F%3Flocale%3Des_ES">Facebook</a></li>
+                <li><a href="https://www.instagram.com/?hl=es">Instagram</a></li>
+                <li><a href="https://x.com/?lang=es&mx=2">Twitter</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script>
+    document.getElementById('elBoton').addEventListener('click', function () {
+        alert("Al alumno " + document.getElementById('elNombre').value 
+        + " se le ha asignado estos datos: \n" +
+        "Empresa: " + document.getElementById('laEmpresa').value + "\n" + 
+        "Fecha inicio: " + document.getElementById('fechaInicio').value + "\n" + 
+        "Fecha fin: " + document.getElementById('fechaFin').value + "\n" + 
+        "Horario: " + document.getElementById('horario').value + "\n" + 
+        "Nº de horas: " + document.getElementById('horas').value + "\n" + 
+        "Modalidad: " + document.getElementById('modalidad').value);
+});
+</script>
+
+</html>

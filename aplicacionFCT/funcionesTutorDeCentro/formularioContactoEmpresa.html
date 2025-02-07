@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina principal</title>
+    <link rel="stylesheet" href="../estilos.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="cabecera">
+            <img src="../imagenes/logo.png" alt="Logo FCT" height="90px" id="logo">
+            <h1>Aplicacion FCT</h1>
+            <a href="../sesiones/sesionIniciadaTutorDeCentro.html"><button id="botonCierra">Volver</button></a>
+        </div>
+
+        <div id="cuerpo">
+            <div id="contenidoFormulario">
+                <h3>Formulario de contacto de empresas</h3>
+                ID:<input type="text" name="id">
+                <br><br>
+                Nombre completo:<input type="text" name="nombre">
+                <br><br>
+                Cargo:<input type="text" name="cargo">
+                <br><br>
+                Departamento:<input type="text" name="departamento">
+                <br><br>
+                Correo electrónico:<input type="email" name="correo">
+                <br><br>
+                Número de teléfono:<input type="number" name="numero">
+                <br><br>
+                Extensión telefónica:<input type="number" name="extenson">
+                <br><br>
+                Dirección de la oficina:<input type="text" name="direccionEmpresa">
+                <br><br>
+                Horario:<input type="text" name="horario">
+                <br><br>
+                Nivel de acceso:
+                <select name="acceso">
+                    <option value="Acceso Total">Acceso Total</option>
+                    <option value="Acceso Limitado">Acceso Limitado</option>
+                    <option value="Administrador Personal">Administrador Personal</option>
+                </select>
+                <br><br>
+                Relacion con la empresa:
+                <select name="RolEmpresa">
+                    <option value="Empleado">Empleado</option>
+                    <option value="Contratista">Contratista</option>
+                    <option value="Consultor">Consultor</option>
+                    <option value="Directivo">Directivo</option>
+                </select>
+                <br><br>
+                Fecha de ingreso:<input type="date" name="fechaIngreso">
+                <br><br>
+                Foto de perfil:<input type="image" name="logo">
+                <br><br>
+                Observaciones:<input type="text" name="observaciones">
+                <br><br>
+                Estado:
+                <select name="estado">
+                    <option value="Activo">Activo</option>
+                    <option value="Inactivo">Inactivo</option>
+                    <option value="licencia">licencia</option>
+                    <option value="Baja">Baja</option>
+                </select>
+                <br><br>
+                Notas adicionales:<input type="text" name="notas">
+                <br><br>
+                Empresa:<input type="text" name="empresa">
+                <br><br>
+                <input type="submit" name="enviar" id="Enviar">
+            </div>
+        </div>
+
+        <div id="pie">
+            <p>Contacto: aplicacionFCT@gmail.com | Teléfono: +34 67348045</p>
+            <p>Síguenos en:</p>
+            <ul>
+                <li><a href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2F%3Flocale%3Des_ES">Facebook</a></li>
+                <li><a href="https://www.instagram.com/?hl=es">Instagram</a></li>
+                <li><a href="https://x.com/?lang=es&mx=2">Twitter</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script>
+    document.getElementById('Enviar').addEventListener('click', function () {
+        const id = document.querySelector('input[name="id"]').value.trim();
+        const nombre = document.querySelector('input[name="nombre"]').value.trim();
+        const cargo = document.querySelector('input[name="cargo"]').value.trim();
+        const departamento = document.querySelector('input[name="departamento"]').value.trim();
+        const correo = document.querySelector('input[name="correo"]').value.trim();
+        const numero = document.querySelector('input[name="numero"]').value.trim();
+
+        if (!id || !nombre || !cargo || !departamento || !correo || !numero) {
+            alert('Formulario incompleto. Por favor, complete todos los campos obligatorios.');
+            return;
+        }
+
+        alert('Formulario enviado con éxito.');
+    });
+
+</script>
+
+</html>
