@@ -1,2 +1,49 @@
-# aplicacionFCT-
-Este proyecto se compone de tecnologías HTML, CSS, JavaScrip y Nodejs. Su función final es crear una web para gestionar todo lo relacionado sobre las prácticas de los alumnos de grado superior en su segundo año. Para ello desde el lado del cliente creamos una interfaz sencilla donde se pueda ver las diferentes funciones de la aplicación como son los diferentes formularios a rellenar, o la modificaciones de datos que pueden hacer profesores o el administrador. Todo esto esta alojado a traves de un servidor localhost creado con Nodejs y que se instancia en el puerto 3000 de nuestro navegador.
+📚 Aplicacion FCT
+
+Este es una aplicacion para las FCT desarrolada con HTML, CSS, JavaScript y Nodejs 
+
+✨ Funcionalidades principales
+
+🖥️ Formularios para alumnos, profesores, empresas, etc
+
+🧑‍🎓 Información añadida de datos para las diferentes fases de la FCT
+
+📧 Inicio de sesión para los diferentes usuarios
+
+🗓️ Borrar y modificar datos de usuario
+
+🔧 Requisitos
+
+Para ejecutar el sistema, necesitas lo siguiente:
+
+Visual Studio Code con Node.js
+
+🚀 Contribuciones
+
+Si quieres mejorar este proyecto:
+
+Haz un fork del repositorio.
+
+Crea una rama para tus cambios:
+
+git checkout -b mi-nueva-funcionalidad
+
+Realiza los cambios y súbelos:
+
+git commit -m "Descripción de los cambios"
+
+Envía un Pull Request.
+
+✉️ Licencia
+
+Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más información.
+
+⭐ Apoya el proyecto
+
+Si este sistema te ha sido útil, ¡no dudes en darle una estrella! ⭐
+
+Cómo ayudar:
+
+✅ Da una estrella ⭐ al repositorio. ✅ Haz un fork y mejora el código. ✅ Envía un Pull Request con tus aportes.
+
+¡Gracias por tu apoyo! 🙌
